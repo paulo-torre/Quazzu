@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const FooterWrapper = styled.footer`
-  background-image: linear-gradient(to bottom, #00000000, #000000bb);
+  background-image: linear-gradient(to bottom, transparent, #000000cc);
   padding: 20px;
   display: flex;
   align-items: center;

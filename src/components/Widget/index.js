@@ -3,21 +3,26 @@ import styled from 'styled-components';
 const Widget = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
-  border: 1px solid ${ ({ theme }) => theme.colors.laranja };
+  border: 1px solid ${ ({ theme }) => theme.colors.azulEscuro };
   background-color: ${ ({ theme }) => theme.colors.mainBg };
   border-radius: 5px;
   overflow: hidden;
 
   h1, h2, h3 {
-    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1;
     margin-bottom: 0;
+    cursor: default;
   }
   p {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 400;
     line-height: 1;
+    margin-top: 9px;
+    text-align: start;
+    cursor: default;
   }
 `;
 
@@ -26,7 +31,7 @@ Widget.Header = styled.header `
   justify-content: flex-start;
   align-items: center;
   padding: 18px 32px;
-  background-color: ${ ({ theme }) => theme.colors.verde };
+  background-color: ${ ({ theme }) => theme.colors.azul };
 
   * {
     margin: 0;

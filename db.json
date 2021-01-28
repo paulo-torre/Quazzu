@@ -1,5 +1,5 @@
 {
-  "bg": "https://articles.gamerheadquarters.com/images/top10/movies/10.jpg",
+  "bg": "https://site-for-img.vercel.app/imagem.png",
   "title": "Titulo Do Quiz",
   "description": "Descrição do seu quiz aqui",
   "questions": [
@@ -41,7 +41,8 @@
       "sucess": "#40ca00",
       "laranja": "#dd8c2f",
       "mainBg": "#1c1814",
-      "text": "#fff"
+      "text": "#fff",
+      "azulEscuro": "#1055cc"
     },
     "borderRadius": "4px"
   }
