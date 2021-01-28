@@ -19,7 +19,7 @@ const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-    opacity: .5;
+    opacity: .7;
   }
   &:disabled {
     display: none;

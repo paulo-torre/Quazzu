@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 const Widget = styled.div`
-  margin-top: 24px;
+  margin-top: 0px;
   margin-bottom: 24px;
   border: 1px solid ${ ({ theme }) => theme.colors.azulEscuro };
   background-color: ${ ({ theme }) => theme.colors.mainBg };
   border-radius: 5px;
   overflow: hidden;
+  box-shadow: 0px 0px 7px #0009;
 
   h1 {
     font-family: 'Roboto', sans-serif;
@@ -73,11 +74,12 @@ Widget.Topic = styled.a`
   border-radius: ${ ({ theme }) => theme.borderRadius };
   transition: all .3s;
   display: block;
+  text-shadow: 0px 0px 0px transparent;
 
-  &:hover,
-  &:focus {
-    background-color: ${ ({ theme }) => `${theme.colors.azul}99`};
+  &:hover {
+    background-color: ${ ({ theme }) => theme.colors.azul};
     width: 100%;
+    opacity: .7;
   }
 `;
 
