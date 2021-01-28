@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 
 import db from'../db.json';
 import Widget from '../src/components/Widget/index';
@@ -10,6 +11,7 @@ import GitHubCorner from '../src/components/GitHubCorner/index';
 import QuizBackground from "../src/components/QuizBackground/index";
 import QuizLogo from '../src/components/QuizLogo';
 import Input from '../src/components/Input/index';
+import Button from '../src/components/Button/index';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -46,15 +48,19 @@ export default function Home() {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
             }}>
-              <Input
-                onChange={ ( infosDoEvento ) => setName(infosDoEvento.target.value)}
 
-                placeholder="Escreva seu nome     Mínimo de 3 letras" 
+              <center><h2>Escreva seu nome:</h2></center>
+              
+              <Input
+                name="nomeDoUsuario"
+                onChange={ ( infosDoEvento ) => setName(infosDoEvento.target.value)}
+                placeholder="Mínimo de 3 letras" 
+                value={ name }
               />
 
-              <button type="submit" disabled={name.length < 3}>
-                Vamos jogar, {name}!
-              </button>
+              <Button type="submit" disabled={name.length < 3}>
+                {`Vamos Jogar, ${name}!`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
@@ -72,4 +78,15 @@ export default function Home() {
       <Footer />
     </QuizBackground>
   );
+}
+
+Input.defaultProps = {
+  value: '',
+};
+
+Input.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string,
 }
