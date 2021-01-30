@@ -34,7 +34,9 @@ function ResultWidget({ results }) {
             Você acertou:
             {' '}
             {results.filter((x) => x).length}
-            {' '}questões!
+            {' '}
+            {results.filter((x) => x).length < 2 && 'questão!'}
+            {results.filter((x) => x).length > 1 && 'questões!'}
           </h1>
         </Widget.Content>
       </Widget>
@@ -125,9 +127,6 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit, add
           <Button type="submit" disabled={ !hasAlternativeSelected }>
             Confirmar 
           </Button>
-
-          {/* {isQuestionsSubmited && isCorrect && <p>Vc Acertou</p> }
-          {isQuestionsSubmited && !isCorrect && <p>Vc Errou!</p>} */}
          </AlternativesForm>
 
       </Widget.Content>
