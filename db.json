@@ -4,27 +4,21 @@
   "description": "Descrição do seu quiz aqui",
   "questions": [
     {
-      "image": "https://placehold.it/400x400",
-      "title": "Questão numero 01",
-      "description": "Descrição da questão numero #01",
+      "title": "O Luiz é gordo?",
+      "description": "Essa é fácil!",
       "answer": 1,
       "alternatives": [
-        "Alternativa A",
-        "Alternativa B",
-        "Alternativa C",
-        "Alternativa D"
+        "Não",
+        "Sim"
       ]
     },
     {
-      "image": "https://placehold.it/400x400",
-      "title": "Questão numero 02",
-      "description": "Descrição da questão numero #02",
-      "answer": 2,
+      "title": "Quem é mais bonito? Paulo ou Luiz",
+      "description": "Essa tb é bem fácil!",
+      "answer": 0,
       "alternatives": [
-        "Alternativa A",
-        "Alternativa B",
-        "Alternativa C",
-        "Alternativa D"
+        "Paulo",
+        "Luiz"
       ]
     }
   ],
@@ -35,7 +29,7 @@
     "colors": {
       "azul": "#2888f5",
       "vermelho": "#f02727",
-      "verde": "#4caf50",
+      "verde": "#0fa530",
       "amarelo": "#d6e600",
       "cinza": "#383838",
       "sucess": "#40ca00",

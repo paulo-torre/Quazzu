@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  background-color: ${ ({ theme }) => theme.colors.azul };
-  color: ${ ({ theme }) => theme.colors.text };
-  border: 0;
+  background-color: transparent;
+  color: ${ ({ theme }) => theme.colors.azul };
+  border: 2px solid ${ ({ theme }) => theme.colors.azul };
   border-radius: ${ ({ theme }) => theme.borderRadius };
 
   width: 100%;
@@ -17,9 +17,11 @@ const Button = styled.button`
   transition: .3s;
   margin-top: 10px;
   cursor: pointer;
+  transition: all .3s;
 
   &:hover {
-    opacity: .7;
+    background-color: ${ ({ theme }) => theme.colors.azul };
+    color: ${ ({ theme }) => theme.colors.text };
   }
   &:disabled {
     display: none;

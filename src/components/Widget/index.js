@@ -14,7 +14,6 @@ const Widget = styled.div`
     font-size: 20px;
     font-weight: 700;
     line-height: 1;
-    margin-bottom: 0;
     cursor: default;
   }
   h2 {
@@ -33,10 +32,11 @@ const Widget = styled.div`
     margin-top: 9px;
     text-align: start;
     cursor: default;
+    margin-bottom: 35px;
   }
 `;
 
-Widget.Header = styled.header `
+Widget.Header = styled.header`
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -49,7 +49,7 @@ Widget.Header = styled.header `
 `;
 
 Widget.Content = styled.div`
-  padding: 24px 32px 32px 32px;
+  padding: 32px 32px 32px 32px;
   & > *:first-child {
     margin-top: 0;
   }
@@ -64,22 +64,23 @@ Widget.Content = styled.div`
 
 Widget.Topic = styled.a`
   outline: none;
-  width: 95%;
+  width: 96%;
   text-decoration: none;
   color: ${ ({ theme }) => theme.colors.text };
-  background-color: ${ ({ theme }) => `${theme.colors.azul}80`};
+  background-color: #2461a7;
   padding: 10px 15px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   cursor: pointer;
   border-radius: ${ ({ theme }) => theme.borderRadius };
   transition: all .3s;
   display: block;
   text-shadow: 0px 0px 0px transparent;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: ${ ({ theme }) => theme.colors.azul};
     width: 100%;
-    opacity: .7;
+    opacity: .8;
   }
 `;
 
