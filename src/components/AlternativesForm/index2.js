@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const AlternativesForm = styled.form `
   label {
     &[data-selected = "true"] {
-      background-color: #88f;
+      background-color: ${({theme}) => theme.colors.vermelhoClaro};
       text-shadow: 2px 2px 5px #0009;
       &:hover {
         width: 96%;

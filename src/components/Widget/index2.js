@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-const Widget = styled.div`
+const Widget2 = styled.div`
   margin-top: 0px;
   margin-bottom: 24px;
-  border: 1px solid ${ ({ theme }) => theme.colors.azulEscuro };
-  background-color: ${ ({ theme }) => theme.colors.mainBg };
+  border: 2px solid ${ ({ theme }) => theme.colors.vermelhoEscuro };
+  background-color: ${ ({ theme }) => theme.colors.mainBg2 };
   border-radius: 5px;
   overflow: hidden;
 
@@ -44,19 +44,19 @@ const Widget = styled.div`
   }
 `;
 
-Widget.Header = styled.header`
+Widget2.Header = styled.header`
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 18px 32px;
-  background-color: ${ ({ theme }) => theme.colors.azul };
+  background-color: ${ ({ theme }) => theme.colors.vermelho };
 
   * {
     margin: 0;
   }
 `;
 
-Widget.Content = styled.div`
+Widget2.Content = styled.div`
   padding: 32px 32px 32px 32px;
   & > *:first-child {
     margin-top: 0;
@@ -70,12 +70,12 @@ Widget.Content = styled.div`
   }
 `;
 
-Widget.Topic = styled.a`
+Widget2.Topic = styled.a`
   outline: none;
   width: 96%;
   text-decoration: none;
   color: ${ ({ theme }) => theme.colors.text };
-  background-color: #2461a7;
+  background-color: ${ ({ theme }) => theme.colors.vermelhoEscuro }90;
   padding: 10px 15px;
   margin-bottom: 10px;
   cursor: pointer;
@@ -86,20 +86,20 @@ Widget.Topic = styled.a`
 
   &:hover,
   &:focus {
-    background-color: ${ ({ theme }) => theme.colors.azul};
+    background-color: ${ ({ theme }) => theme.colors.vermelhoEscuro };
     width: 100%;
     opacity: .8;
   }
 `;
 
-Widget.Topic2 = styled.button`
+Widget2.Topic2 = styled.button`
   font-size: 15.2px;
   outline: none;
   width: 100%;
   text-align: start;
-  border: 2px solid ${ ({ theme }) => theme.colors.azul };
+  border: 2px solid ${ ({ theme }) => theme.colors.vermelhoClaro };
   text-decoration: none;
-  color: ${ ({ theme }) => theme.colors.azul };
+  color: ${ ({ theme }) => theme.colors.vermelhoClaro };
   background-color: transparent;
   padding: 10px 15px;
   margin-top: 15px;
@@ -110,10 +110,10 @@ Widget.Topic2 = styled.button`
   text-shadow: 0px 0px 0px transparent;
 
   &:hover {
-    background-color: ${ ({ theme }) => theme.colors.azul}80;
+    background-color: ${ ({ theme }) => theme.colors.vermelho};
     color: white;
-    border: 2px solid ${ ({ theme }) => theme.colors.azul}80;
+    border: 2px solid ${ ({ theme }) => theme.colors.vermelho};
   }
 `;
 
-export default Widget;
+export default Widget2;

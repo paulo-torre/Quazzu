@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 `;
 
 const SVGWrapper = styled.svg`
-  fill: ${({ theme }) => theme.colors.azulEscuro};
+  fill: ${({ theme }) => theme.colors.vermelhoEscuro};
   color: ${({ theme }) => theme.colors.text};
   cursor: pointer;
   &:hover .octo-arm{
@@ -31,7 +31,7 @@ const SVGWrapper = styled.svg`
   }
 `;
 
-export default function GitHubCorner({ projectUrl }) {
+export default function GitHubCorner2({ projectUrl }) {
   return (
     <Wrapper>
       <a href={projectUrl} target="_blank" rel="noreferrer">

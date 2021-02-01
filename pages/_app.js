@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Lato', sans-serif;
     color: ${({ theme }) => theme.colors.text};
     text-shadow: 2px 2px 5px #00000050;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   html, body {

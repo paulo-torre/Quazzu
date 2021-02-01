@@ -1,13 +1,13 @@
 import React from 'react';
-import { QuizContainer } from './index';
+import { QuizContainer } from './cobrakai';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
-import Widget from '../src/components/Widget';
+import Widget2 from '../src/components/Widget/index2';
 import db from '../db.json';
-import Button from '../src/components/Button';
+import Button2 from '../src/components/Button/index2';
 import Loader from '../src/components/Loader/index';
 import Loader2 from '../src/components/Loader/index2';
-import AlternativesForm from '../src/components/AlternativesForm';
+import AlternativesForm2 from '../src/components/AlternativesForm/index2';
 import LinkContent from '../src/components/LinkContent';
 import Head from 'next/head';
 
@@ -20,8 +20,8 @@ function ResultWidget({ results }) {
 
       <QuizContainer>
         <QuizLogo />
-        <Widget>
-          <Widget.Content>
+        <Widget2>
+          <Widget2.Content>
               {/* {results.map( (result, index) => {
                 <ul>
                   <li key={`result__${ result }`}> 
@@ -45,8 +45,8 @@ function ResultWidget({ results }) {
               {results.filter((x) => x).length < 2 && 'questão!'}
               {results.filter((x) => x).length > 1 && 'questões!'}
             </h1>
-          </Widget.Content>
-        </Widget>
+          </Widget2.Content>
+        </Widget2>
         
         <LinkContent>
           Mande esse link para seus amigos, e veja se eles sabem de CSS!
@@ -71,15 +71,15 @@ function LoadingWidget() {
         <title>Carregando...</title>
       </Head>
 
-      <Widget>
-        <Widget.Header>
+      <Widget2>
+        <Widget2.Header>
           <Loader />
-        </Widget.Header>
+        </Widget2.Header>
 
-        <Widget.Content>
+        <Widget2.Content>
           <Loader2 />
-        </Widget.Content>
-      </Widget>
+        </Widget2.Content>
+      </Widget2>
     </>
   );
 }
@@ -97,14 +97,14 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit, add
         <title>Quazzu?</title>
       </Head>
 
-      <Widget>
-        <Widget.Header>
+      <Widget2>
+        <Widget2.Header>
           <h1>
             {`Pergunta ${questionIndex + 1} / ${totalQuestions}`}
           </h1>
-        </Widget.Header>
+        </Widget2.Header>
             
-        <Widget.Content>
+        <Widget2.Content>
           <h1>  
             { question.title }
           </h1>
@@ -113,7 +113,7 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit, add
             { question.description }
           </h3>
 
-          <AlternativesForm onSubmit={ ( infosDoEvento ) => {
+          <AlternativesForm2 onSubmit={ ( infosDoEvento ) => {
             infosDoEvento.preventDefault();
             setIsQuestionsSubmited(true);
             setTimeout(() => {
@@ -131,7 +131,7 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit, add
 
               return (
                 <center>
-                  <Widget.Topic
+                  <Widget2.Topic
                     as="label" 
                     key={alternativeId}
                     htmlFor={alternativeId}
@@ -142,7 +142,7 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit, add
                 <input 
                     style={{ 
                       display: 'none',
-                      cursor: 'pointer',
+                      cursor: 'pointer'
                     }}
                     name={ questionId }
                     id={ alternativeId }
@@ -150,18 +150,18 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit, add
                     type="radio"
                   />
                   {alternative}
-                </Widget.Topic>
+                </Widget2.Topic>
               </center>
               );
             })}
 
-            <Button type="submit" disabled={ !hasAlternativeSelected }>
+            <Button2 type="submit" disabled={ !hasAlternativeSelected }>
               Confirmar 
-            </Button>
-          </AlternativesForm>
+            </Button2>
+          </AlternativesForm2>
 
-        </Widget.Content>
-      </Widget>
+        </Widget2.Content>
+      </Widget2>
     </>
   );
 }
@@ -203,7 +203,7 @@ export default function QuizPage() {
   }
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={db.bg2}>
       <QuizContainer>
 
         { screenState === screenStates.QUIZ && 

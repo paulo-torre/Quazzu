@@ -5,13 +5,12 @@ import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 
 import db from'../db.json';
-import Widget from '../src/components/Widget/index';
-// import Footer from '../src/components/Footer/index';
-import GitHubCorner from '../src/components/GitHubCorner/index';
+import Widget2 from '../src/components/Widget/index2';
+import GitHubCorner2 from '../src/components/GitHubCorner/index2';
 import QuizBackground from "../src/components/QuizBackground/index";
 import QuizLogo from '../src/components/QuizLogo';
-import Input from '../src/components/Input/index';
-import Button from '../src/components/Button/index';
+import Input2 from '../src/components/Input/index2';
+import Button2 from '../src/components/Button/index2';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -24,60 +23,60 @@ export const QuizContainer = styled.div`
   }
 `;
 
-export default function Home() {
+export default function cobraKaiPage() {
   const router = useRouter(); 
   const [ name, setName ] = React.useState('');
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={db.bg2}>
       <Head>
-        <title>Quazzu?</title>
+        <title>Quazzu? - Cobra Kai</title>
       </Head>
 
       <QuizContainer>
         <QuizLogo />
 
-        <Widget>
-          <Widget.Header>
-            <h1>Você é bom em CSS ? <p>Vamos ver!</p> </h1>
-          </Widget.Header>
+        <Widget2>
+          <Widget2.Header>
+            <h1>Você conhece Cobra Kai ? <p>Vamos ver!</p> </h1>
+          </Widget2.Header>
 
-          <Widget.Content>
+          <Widget2.Content>
             <form onSubmit={ function ( infosDoEvento ) {
               infosDoEvento.preventDefault();
-              router.push(`/quiz?name=${name}`);
+              router.push(`/cobrakai=quiz?name=${name}`);
             }}>
 
               <center><h2>Escreva seu nome:</h2></center>
               
-              <Input
+              <Input2
                 name="nomeDoUsuario"
                 onChange={ ( infosDoEvento ) => setName(infosDoEvento.target.value)}
                 placeholder="Mínimo de 3 letras" 
                 value={ name }
               />
 
-              <Button type="submit" disabled={name.length < 3}>
+              <Button2 type="submit" disabled={name.length < 3}>
                 {`Vamos Jogar, ${name}!`}
-              </Button>
+              </Button2>
             </form>
-          </Widget.Content>
-        </Widget>
+          </Widget2.Content>
+        </Widget2>
 
-        <Widget>
-          <Widget.Content>
+        <Widget2>
+          <Widget2.Content>
             <h1>Outros Quizes:</h1>
 
             <ul>
 
               <form onSubmit={ function ( infosDoEvento ) {
                   infosDoEvento.preventDefault();
-                  router.push(`/cobrakai?home`);
+                  router.push(`/`);
               }}>
                 <li>
-                  <Widget.Topic2 type='Submit'>
-                    {db.external.cobraKai}
-                  </Widget.Topic2>
+                  <Widget2.Topic2 type='Submit'>
+                    {db.external1.css}
+                  </Widget2.Topic2>
                 </li>
               </form>
 
@@ -86,9 +85,9 @@ export default function Home() {
                   router.push(`/minecraft?home`);
               }}>
                 <li>
-                  <Widget.Topic2>
+                  <Widget2.Topic2>
                     {db.external.minecraft}
-                  </Widget.Topic2>
+                  </Widget2.Topic2>
                 </li>
               </form>
 
@@ -97,9 +96,9 @@ export default function Home() {
                   router.push(`/javascript?home`);
               }}>
                 <li>
-                  <Widget.Topic2>
+                  <Widget2.Topic2>
                     {db.external.javaScript}
-                  </Widget.Topic2>
+                  </Widget2.Topic2>
                 </li>
               </form>
 
@@ -108,28 +107,28 @@ export default function Home() {
                   router.push(`/animais?home`);
               }}>
                 <li>
-                  <Widget.Topic2>
+                  <Widget2.Topic2>
                     {db.external.animais}
-                  </Widget.Topic2>
+                  </Widget2.Topic2>
                 </li>
               </form>
 
             </ul>
-          </Widget.Content>
-        </Widget>
+          </Widget2.Content>
+        </Widget2>
 
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/paulo-torre" />
+      <GitHubCorner2 projectUrl="https://github.com/paulo-torre" />
       {/* <Footer /> */}
     </QuizBackground>
   );
 }
 
-Input.defaultProps = {
+Input2.defaultProps = {
   value: '',
 };
 
-Input.propTypes = {
+Input2.propTypes = {
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
