@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const AlternativesForm2 = styled.form `
+const AlternativesForm3 = styled.form `
   label {
     &[data-selected = "true"] {
-      background-color: ${ ({ theme }) => theme.colors.vermelhoClaro };
+      background-color: ${ ({ theme }) => theme.colors.verde };
       text-shadow: 2px 2px 5px #0009;
       &:hover {
         width: 96%;
@@ -34,4 +34,4 @@ const AlternativesForm2 = styled.form `
   }
 `;
 
-export default AlternativesForm2;
+export default AlternativesForm3;

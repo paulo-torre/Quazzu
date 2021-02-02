@@ -1,6 +1,7 @@
 {
   "bg": "https://site-for-img.vercel.app/imagem.png",
   "bg2": "https://site-for-img.vercel.app/imagem3.jpg",
+  "bg3": "https://site-for-img.vercel.app/imagem4.jpg",
   "title": "Titulo Do Quiz",
   "description": "Descrição do seu quiz aqui",
   "questions": [
@@ -42,6 +43,7 @@
       "azul": "#2888f5",
       "vermelho": "#f51e1e",
       "verde": "#0fa530",
+      "verdeClaro": "#5dd60d",
       "amarelo": "#d6e600",
       "cinza": "#383838",
       "sucess": "#40ca00",
@@ -51,6 +53,8 @@
       "vermelhoClaro": "#ff6c6c",
       "vermelhoEscuro": "#9b1212",
       "mainBg2": "#360c0c",
+      "marrom": "#3d2509",
+      "verdeEscuro": "#13830f",
       "azulEscuro": "#1055cc"
     },
     "borderRadius": "4px"
