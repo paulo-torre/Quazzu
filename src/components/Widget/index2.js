@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Widget2 = styled.div`
   margin-top: 0px;
   margin-bottom: 24px;
-  border: 2px solid ${ ({ theme }) => theme.colors.vermelhoEscuro };
+  border: 1px solid ${ ({ theme }) => theme.colors.vermelhoEscuro };
   background-color: ${ ({ theme }) => theme.colors.mainBg2 };
   border-radius: 5px;
   overflow: hidden;
